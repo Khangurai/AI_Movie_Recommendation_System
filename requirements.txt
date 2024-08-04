@@ -1,0 +1,5 @@
+cohere
+python-dotenv
+deep-translator
+streamlit
+requests
