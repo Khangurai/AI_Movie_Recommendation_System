@@ -7,6 +7,8 @@ url = 'https://drive.google.com/file/d/1cC1AP0qXIQmOQ8iNiGj9DTE0WFXhw1E9/view?us
 
 # Local file name where the file will be saved
 output = 'similarity_TfidfVectorizer.pkl'
+output2 = 'movie_lists.pkl'
+
 
 # Download the file
 gdown.download(url, output, quiet=False)
