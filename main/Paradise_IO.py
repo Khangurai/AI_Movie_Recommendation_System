@@ -21,6 +21,8 @@ TMDB_API_KEY = os.getenv('TMDB_API_KEY')
 # Define the path to the folder containing data files
 movieList_path = r'E:\MRS\main\Dataset'
 similarity_path = r'E:\MRS\main\Dataset'
+# movieList_path = 'https://gitlab.com/Khangurai/ai_movie_recommendation_system_dataset/-/blob/master/main/movies_listUpdate_Tfidf.pkl'
+# similarity_path = 'E:\MRS\main\Dataset'
 
 # Try to load movie and similarity data from pickle files
 try:
