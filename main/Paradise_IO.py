@@ -30,6 +30,8 @@ try:
         similarity = pickle.load(file)
 
     print("Movie list and similarity files loaded successfully!")
+    print("Similarity files loaded successfully!")
+    print()
 except FileNotFoundError as e:
     print(f"File not found: {e}")
 except pickle.PickleError as e:
@@ -168,7 +170,7 @@ try:
 
 #7. Sidebar and Dropdown Setup
     # Create a sidebar with tabs for Popular and Now Playing movies
-    tabs = st.sidebar.tabs(["Popular", "Now Playing"])
+    tabs = st.sidebar.tabs(["Popular", "Now Playing 2024"])
 
     with tabs[0]:  # Popular Movies tab
         st.header('Popular Movies')
@@ -214,7 +216,7 @@ try:
 #8. Generate and Display Recommendations
     # Generate prompt for recommendations
     prompt = (f"You are a movie recommender and your job is to recommend new movies based on user input."
-              f"Please recommend three trending movies similar to '{select_value}', including their year of release and a very short description for each.")
+              f"Please recommend three trending movies similar to '{select_value}', including their year of release and a very short casual description for each.")
     if st.button('Show Recommend', key='show_recommend'):
         # Generate a recommendation response from Cohere
         response = co.generate(

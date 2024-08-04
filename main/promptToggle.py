@@ -14,7 +14,7 @@ def main():
     co = cohere.Client(COHERE_API_KEY)
 
     # Create a toggle switch in the Streamlit app
-    on = st.toggle("ခံစားချက်အတိုင်းရှာမလား")
+    on = st.toggle("ခံစားချက်အတိုင်းရှာမယ်")
 
     # Check if 'response_text' and 'translate_toggle' exist in session state
     if 'response_text' not in st.session_state:
