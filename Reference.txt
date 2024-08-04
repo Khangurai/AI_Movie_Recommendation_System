@@ -1,0 +1,7 @@
+source code
+https://www.youtube.com/watch?v=or_8C2MXRU0&t=1357s
+https://github.com/Chando0185/movie_recommender_system
+##########
+dataset
+https://www.kaggle.com/datasets/ahsanaseer/top-rated-tmdb-movies-10k
+#########
