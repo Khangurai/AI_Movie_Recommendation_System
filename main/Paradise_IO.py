@@ -192,7 +192,7 @@ try:
             st.write("No popular movies available.")
 
     with tabs[1]:  # Now Playing Movies tab
-        st.header('Now Playing')
+        st.header('Now Playing 2024')
         now_playing_movies = fetch_now_playing()
         if now_playing_movies:
             for title, movie_id, poster_path in now_playing_movies:
