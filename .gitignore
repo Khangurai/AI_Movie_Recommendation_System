@@ -2,9 +2,9 @@
 
 /.devcontainer
 
-/.pkl
+/*.pkl
 
-/.pyc
+/*.pyc
 
 /.devcontainer
 
