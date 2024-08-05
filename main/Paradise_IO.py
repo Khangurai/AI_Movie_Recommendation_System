@@ -17,29 +17,33 @@ load_dotenv()
 COHERE_API_KEY = os.getenv('COHERE_API_KEY')
 TMDB_API_KEY = os.getenv('TMDB_API_KEY')
 
-#. Load Data Files
-# Define the path to the folder containing data files
-movieList_path = r'E:\MRS\main\Dataset'
-similarity_path = r'E:\MRS\main\Dataset'
-# movieList_path = 'https://gitlab.com/Khangurai/ai_movie_recommendation_system_dataset/-/blob/master/main/movies_listUpdate_Tfidf.pkl'
-# similarity_path = 'E:\MRS\main\Dataset'
+# Define the paths based on environment
+path1 = r'E:\MRS\main'
+path2 = r'D:\###MyLerning\AI_Movie_Recommendation_System\main'
+
+# Choose which path to use
+use_path1 = False  # Set this to False if you want to use path2
+
+if use_path1:
+    movieList_path = path1
+    similarity_path = path1
+else:
+    movieList_path = path2
+    similarity_path = path2
 
 # Try to load movie and similarity data from pickle files
 try:
-    with open(os.path.join(movieList_path, 'movies_listUpdate.pkl'), 'rb') as file:
+    with open(os.path.join(movieList_path, 'movies_listUpdate_Tfidf.pkl'), 'rb') as file:
         movies = pickle.load(file)
     with open(os.path.join(similarity_path, 'similarity_TfidfVectorizer.pkl'), 'rb') as file:
         similarity = pickle.load(file)
 
-    print("Movie list and similarity files loaded successfully!")
-    print("Similarity files loaded successfully!")
-    print()
+        print("Movie list and similarity files loaded successfully!")
+        print("Similarity files loaded successfully!")
+        print()
+
 except FileNotFoundError as e:
-    print(f"File not found: {e}")
-except pickle.PickleError as e:
-    print(f"Error loading pickle file: {e}")
-except Exception as e:
-    print(f"An unexpected error occurred: {e}")
+    print(f"Error: {e}")
 
 # Extract movie titles for the dropdown menu
 movies_list = movies['title'].values
